@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 export default function Footer() {
   const footerLinks = {
@@ -87,9 +88,11 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center space-x-3 mb-6"
             >
-              <img
+              <Image
                 src="https://storage.googleapis.com/cosmic-project-image-assets/images/64edf6ff-8552-43bd-a445-183f57f441b5/Group_152.png"
                 alt="PlythosAI"
+                width={40}
+                height={40}
                 className="h-10 w-10"
               />
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">PlythosAI</span>
