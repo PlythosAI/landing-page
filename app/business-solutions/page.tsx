@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import BusinessFooter from "@/app/components/BusinessFooter";
 
 interface FormState {
   name: string;
@@ -295,6 +296,7 @@ export default function BusinessSolutionsPage() {
           </div>
         </div>
       </section>
+      <BusinessFooter />
     </div>
   );
 }

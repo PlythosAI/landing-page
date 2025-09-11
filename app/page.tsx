@@ -5,6 +5,7 @@ import HeroSection from "@/app/components/HeroSection";
 import PerformanceSection from "@/app/components/PerformanceSection";
 import FeaturesSection from "@/app/components/FeaturesSection";
 import HowItWorksSection from "@/app/components/HowItWorksSection";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <PerformanceSection />
       <FeaturesSection />
       <HowItWorksSection />
+      <Footer />
     </div>
   );
 }
