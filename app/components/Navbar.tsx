@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,9 +37,11 @@ export default function Navbar() {
               className="flex items-center space-x-3"
             >
               <div className="relative">
-                <img
+                <Image
                   src="https://storage.googleapis.com/cosmic-project-image-assets/images/64edf6ff-8552-43bd-a445-183f57f441b5/Group_152.png"
                   alt="PlythosAI"
+                  width={32}
+                  height={32}
                   className="h-8 w-8 relative z-10"
                 />
                 <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-sm" />

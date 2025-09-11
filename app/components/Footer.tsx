@@ -70,6 +70,7 @@ export default function Footer() {
         setFormStatus({ message: data.error?.message || "An error occurred. Please try again.", type: "error" });
       }
     } catch (error) {
+      console.error("Failed to subscribe:", error);
       setFormStatus({ message: "An unexpected error occurred.", type: "error" });
     }
   };

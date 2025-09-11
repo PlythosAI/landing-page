@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 export default function PerformanceSection() {
   const metrics = [
@@ -114,9 +115,11 @@ export default function PerformanceSection() {
             {/* PlythosAI */}
             <div className="space-y-4">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="https://storage.googleapis.com/cosmic-project-image-assets/images/64edf6ff-8552-43bd-a445-183f57f441b5/Group_152.png"
                   alt="PlythosAI"
+                  width={32}
+                  height={32}
                   className="w-8 h-8 mr-3"
                 />
                 <span className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">PlythosAI</span>
