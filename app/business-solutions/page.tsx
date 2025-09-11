@@ -122,7 +122,7 @@ export default function BusinessSolutionsPage() {
             }, {
               title: "Customer support",
               desc: "Faster, consistent resolutions with intent-aware replies and integrated knowledge.",
-              icon: "solar:lifebuoy-linear"
+              icon: "solar:users-group-rounded-linear"
             }].map((c, i) => (
               <motion.div
                 key={c.title}
@@ -157,7 +157,7 @@ export default function BusinessSolutionsPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-xl border border-white/10 bg-black/40">
-                <Icon icon="solar:lifebuoy-linear" className="w-5 h-5 text-purple-300 mt-0.5" />
+                <Icon icon="solar:users-group-rounded-linear" className="w-5 h-5 text-purple-300 mt-0.5" />
                 <div>
                   <div className="text-white/90">Helpdesk & Chat</div>
                   <div className="text-white/60">Contextual responses, ticket summaries, draft replies</div>
