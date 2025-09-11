@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -132,6 +133,20 @@ export default function HeroSection() {
             <Icon icon="solar:play-bold" className="w-5 h-5 mr-2 inline" />
             Watch Demo
           </motion.button>
+
+          <Link href="/business-solutions">
+            <motion.button
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(147, 51, 234, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="border border-purple-500/50 text-purple-200 px-8 py-4 rounded-full text-lg font-medium backdrop-blur-sm hover:bg-purple-900/20 transition-all duration-300 shadow-[0_0_10px_rgba(147,51,234,0.2)] hover:shadow-[0_0_20px_rgba(147,51,234,0.4)]"
+            >
+              <Icon icon="solar:case-bold" className="w-5 h-5 mr-2 inline" />
+              Business Solutions
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Stats */}
