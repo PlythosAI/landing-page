@@ -239,22 +239,33 @@ export default function Footer() {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-3 bg-black/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-400 transition-colors min-w-[250px] shadow-[0_0_10px_rgba(147,51,234,0.1)] focus:shadow-[0_0_15px_rgba(147,51,234,0.3)]"
-              />
-              <motion.button
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(147, 51, 234, 0.6)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg font-medium whitespace-nowrap border border-purple-500/50 shadow-[0_0_15px_rgba(147,51,234,0.3)] hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] transition-all duration-300"
-              >
-                Subscribe
-              </motion.button>
+            <div className="w-full md:w-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="px-4 py-3 bg-black/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-400 transition-colors min-w-[250px] shadow-[0_0_10px_rgba(147,51,234,0.1)] focus:shadow-[0_0_15px_rgba(147,51,234,0.3)]"
+                  required
+                />
+                <motion.button
+                  type="submit"
+                  whileHover={{ 
+                    scale: 1.05,
+                    boxShadow: "0 0 20px rgba(147, 51, 234, 0.6)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg font-medium whitespace-nowrap border border-purple-500/50 shadow-[0_0_15px_rgba(147,51,234,0.3)] hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] transition-all duration-300"
+                >
+                  Subscribe
+                </motion.button>
+              </form>
+              {formStatus.message && (
+                <p className={`mt-3 text-sm ${formStatus.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                  {formStatus.message}
+                </p>
+              )}
             </div>
           </div>
         </motion.div>
