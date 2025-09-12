@@ -19,7 +19,6 @@ const useCaseOptions = [
   "Sales negotiations",
   "Procurement",
   "Customer support",
-  "Account management",
   "Other",
 ];
 
