@@ -5,7 +5,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 
-export default function PricingSection() {
+interface PricingSectionProps {
+  onContactClick: () => void;
+}
+
+export default function PricingSection({ onContactClick }: PricingSectionProps) {
   const plans = [
     {
       name: "Professional",
@@ -122,6 +126,7 @@ export default function PricingSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={plan.name === 'Enterprise' ? onContactClick : undefined}
                 className={`w-full mt-auto px-6 py-3 rounded-full text-lg font-medium border transition-all duration-300 ${
                   plan.featured
                     ? "bg-gradient-to-r from-purple-600 to-purple-800 text-white border-purple-500/50 shadow-[0_0_20px_rgba(147,51,234,0.4)]"
