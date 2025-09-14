@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import BusinessFooter from "@/app/components/BusinessFooter";
+import PricingSection from "@/app/components/PricingSection";
+import CreditExplanationSection from "@/app/components/CreditExplanationSection";
+import FlexibilitySection from "@/app/components/FlexibilitySection";
 
 interface FormState {
   name: string;
@@ -185,6 +188,10 @@ export default function BusinessSolutionsPage() {
           </div>
         </div>
       </section>
+
+      <PricingSection />
+      <CreditExplanationSection />
+      <FlexibilitySection />
 
       {/* Contact */}
       <section id="b2b-contact" className="py-16 px-6 sm:px-8 lg:px-12">
