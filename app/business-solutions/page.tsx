@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
 import BusinessFooter from "@/app/components/BusinessFooter";
 import PricingSection from "@/app/components/PricingSection";
 import CreditExplanationSection from "@/app/components/CreditExplanationSection";
