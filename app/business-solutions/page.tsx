@@ -101,10 +101,10 @@ export default function BusinessSolutionsPage() {
               <Icon icon="solar:letter-bold" className="w-5 h-5 mr-2" />
               Contact us for custom integrations
             </a>
-            <Link href="/#pricing" className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-purple-700/40 text-purple-200 hover:bg-purple-900/20">
+            <a href="#pricing" className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-purple-700/40 text-purple-200 hover:bg-purple-900/20">
               <Icon icon="solar:tag-price-linear" className="w-5 h-5 mr-2" />
               See Pricing
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
