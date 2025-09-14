@@ -1,25 +1,40 @@
+
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 
-export default function FeaturesSection() {
-  const features = [
+interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+  gradient: string;
+  details: string[];
+}
+
+interface FeaturesSectionProps {
+  title?: string;
+  description?: string;
+  features?: Feature[];
+  showCTA?: boolean;
+}
+
+const defaultFeatures: Feature[] = [
     {
       title: "Hidden Leverage",
-      description: "Discovers psychological pressure points and timing advantages that generic AI misses entirely.",
+      description: "Discovers hidden advantages and timing opportunities that generic AI misses entirely.",
       icon: "material-symbols:strategy",
       gradient: "from-purple-500 to-purple-700",
       details: [
-        "Analyzes seller urgency signals",
+        "Analyzes urgency signals",
         "Identifies optimal timing windows",
         "Detects emotional triggers"
       ]
     },
     {
       title: "Dynamic Learning Engine",
-      description: "Adapts negotiation strategies in real-time based on conversation flow and seller responses.",
+      description: "Adapts strategies in real-time based on conversation flow and responses.",
       icon: "mdi:brain",
       gradient: "from-purple-400 to-purple-600",
       details: [
@@ -30,18 +45,18 @@ export default function FeaturesSection() {
     },
     {
       title: "Risk Quantification",
-      description: "Calculates deal probability and suggests optimal offer ranges with mathematical precision.",
+      description: "Calculates success probability and suggests optimal responses with mathematical precision.",
       icon: "material-symbols:shield",
       gradient: "from-purple-600 to-purple-800",
       details: [
-        "Deal probability scoring",
-        "Optimal price range calculation",
+        "Success probability scoring",
+        "Optimal response calculation",
         "Risk assessment metrics"
       ]
     },
     {
       title: "Strategic Game Plan",
-      description: "Creates multi-step negotiation roadmaps with contingency plans for different scenarios.",
+      description: "Creates multi-step roadmaps with contingency plans for different scenarios.",
       icon: "solar:target-bold",
       gradient: "from-purple-500 to-purple-900",
       details: [
@@ -52,7 +67,7 @@ export default function FeaturesSection() {
     },
     {
       title: "Proactive Strategy",
-      description: "Anticipates seller objections and prepares counter-arguments before they&apos;re needed.",
+      description: "Anticipates objections and prepares counter-arguments before they're needed.",
       icon: "solar:lightning-bold",
       gradient: "from-purple-400 to-purple-800",
       details: [
@@ -62,8 +77,8 @@ export default function FeaturesSection() {
       ]
     },
     {
-      title: "Personal Negotiation Coach",
-      description: "Provides real-time coaching and explains the psychology behind each suggested response.",
+      title: "Your Personal AI Coach",
+      description: "Provides real-time coaching and explains the reasoning behind each suggested response.",
       icon: "mdi:coach-lamp",
       gradient: "from-purple-600 to-purple-400",
       details: [
@@ -72,8 +87,14 @@ export default function FeaturesSection() {
         "Skill development"
       ]
     }
-  ];
+];
 
+export default function FeaturesSection({ 
+  title = "Specialized Features", 
+  description = "Unlike generic AI, PlythosAI is purpose-built for communication with features that understand human psychology and conversational dynamics.", 
+  features = defaultFeatures,
+  showCTA = true 
+}: FeaturesSectionProps) {
   return (
     <section id="features" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,10 +107,10 @@ export default function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-6">
-            Specialized Features
+            {title}
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
-            Unlike generic AI, PlythosAI is purpose-built for negotiation with features that understand human psychology and marketplace dynamics.
+            {description}
           </p>
         </motion.div>
 
@@ -147,33 +168,31 @@ export default function FeaturesSection() {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-purple-900/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-500/30 shadow-[0_0_20px_rgba(147,51,234,0.2)]">
-            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-4">
-              Ready to Negotiate Like a Pro?
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Join thousands of users who have transformed their Facebook Marketplace experience with PlythosAI&apos;s specialized negotiation intelligence.
-            </p>
-            <motion.button
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 0 30px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.3)"
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-8 py-4 rounded-full text-lg font-medium border border-purple-500/50 shadow-[0_0_20px_rgba(147,51,234,0.4)] hover:shadow-[0_0_40px_rgba(147,51,234,0.6)] transition-all duration-300"
-            >
-              <Icon icon="ic:baseline-facebook" className="w-5 h-5 mr-2 inline" />
-              Get PlythosAI Extension
-            </motion.button>
-          </div>
-        </motion.div>
+        {showCTA && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <div className="bg-purple-900/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-500/30 shadow-[0_0_20px_rgba(147,51,234,0.2)]">
+              <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-4">
+                Ready to Communicate Like a Pro?
+              </h3>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Join thousands of users who have transformed their communication with PlythosAI's specialized intelligence.
+              </p>
+              <motion.button
+                disabled
+                className="bg-gray-600 text-white px-8 py-4 rounded-full text-lg font-medium border border-gray-500/50 shadow-[0_0_20px_rgba(147,51,234,0.4)]"
+              >
+                <Icon icon="mdi:google-chrome" className="w-5 h-5 mr-2 inline" />
+                Coming Soon
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

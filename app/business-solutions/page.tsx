@@ -9,6 +9,78 @@ import PricingSection from "@/app/components/PricingSection";
 import CreditExplanationSection from "@/app/components/CreditExplanationSection";
 import FlexibilitySection from "@/app/components/FlexibilitySection";
 import ContactModal from "@/app/components/ContactModal";
+import AIComparisonSection from "@/app/components/AIComparisonSection";
+import FeaturesSection from "@/app/components/FeaturesSection";
+import BusinessHowItWorksSection from "@/app/components/BusinessHowItWorksSection";
+
+const businessFeatures = [
+    {
+      title: "Hidden Leverage",
+      description: "Uncover advantages in high-stakes procurement deals by identifying supplier urgency and optimal timing.",
+      icon: "material-symbols:strategy",
+      gradient: "from-purple-500 to-purple-700",
+      details: [
+        "Analyzes supplier urgency signals",
+        "Identifies optimal timing windows",
+        "Detects emotional triggers"
+      ]
+    },
+    {
+      title: "Dynamic Learning Engine",
+      description: "Adapts strategies in real-time based on conversation flow and responses.",
+      icon: "mdi:brain",
+      gradient: "from-purple-400 to-purple-600",
+      details: [
+        "Real-time strategy adjustment",
+        "Pattern recognition learning",
+        "Behavioral adaptation"
+      ]
+    },
+    {
+      title: "Risk Quantification",
+      description: "Calculates deal probability and suggests optimal offer ranges with mathematical precision.",
+      icon: "material-symbols:shield",
+      gradient: "from-purple-600 to-purple-800",
+      details: [
+        "Deal probability scoring",
+        "Optimal price range calculation",
+        "Risk assessment metrics"
+      ]
+    },
+    {
+      title: "Strategic Game Plan",
+      description: "Develop multi-step roadmaps for complex sales cycles, complete with contingency plans for common objections.",
+      icon: "solar:target-bold",
+      gradient: "from-purple-500 to-purple-900",
+      details: [
+        "Multi-step planning",
+        "Scenario contingencies",
+        "Strategic roadmapping"
+      ]
+    },
+    {
+      title: "Proactive Strategy",
+      description: "Anticipates objections and prepares counter-arguments before they&apos;re needed.",
+      icon: "solar:lightning-bold",
+      gradient: "from-purple-400 to-purple-800",
+      details: [
+        "Objection anticipation",
+        "Pre-prepared responses",
+        "Proactive positioning"
+      ]
+    },
+    {
+      title: "Your Personal AI Coach",
+      description: "Provides real-time coaching and explains the reasoning behind each suggested response.",
+      icon: "mdi:coach-lamp",
+      gradient: "from-purple-600 to-purple-400",
+      details: [
+        "Real-time coaching",
+        "Psychology explanations",
+        "Skill development"
+      ]
+    }
+];
 
 export default function BusinessSolutionsPage() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
@@ -36,7 +108,7 @@ export default function BusinessSolutionsPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto"
           >
-            We customize our model for your business and help integrate it with your systems. From sales negotiations and procurement to customer support, we tailor PlythosAI to your workflows.
+            We customize our model for your business and help integrate it with your systems. From sales and procurement to customer support, we tailor PlythosAI to your workflows.
           </motion.p>
 
           <motion.div
@@ -63,7 +135,7 @@ export default function BusinessSolutionsPage() {
           <h2 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">Where PlythosAI delivers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[{
-              title: "Sales negotiations",
+              title: "Sales",
               desc: "Close more deals with guided plays and objection handling across email and chat.",
               icon: "solar:hand-money-linear"
             }, {
@@ -93,6 +165,15 @@ export default function BusinessSolutionsPage() {
           </div>
         </div>
       </section>
+
+      <AIComparisonSection />
+      <FeaturesSection 
+        title="Specialized Features for Business"
+        description="These features are the core of the PlythosAI technology and are highly relevant to business use cases."
+        features={businessFeatures} 
+        showCTA={false} 
+      />
+      <BusinessHowItWorksSection />
 
       {/* Integrations */}
       <section className="py-6 px-6 sm:px-8 lg:px-12">
