@@ -17,8 +17,8 @@ export default function CreditExplanationSection() {
           className="text-center"
         >
           <Icon icon="solar:help-linear" className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-6">
-            What is a Credit? 🤔
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">What is a Credit?</span> 🤔
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto font-light mb-8">
             A credit is your key to unlocking strategic foresight. <strong className="font-semibold text-white">One credit is used each time you ask PlythosAI to analyze a message and generate a strategic move.</strong>
