@@ -60,14 +60,14 @@ export default function Navbar() {
                 Features
               </motion.a>
               <motion.a 
-                href="#performance" 
+                href="#performance-business" 
                 whileHover={{ scale: 1.05 }}
                 className="text-sm text-white/80 hover:text-purple-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] px-3 py-2 rounded-full hover:bg-white/5"
               >
                 Performance
               </motion.a>
               <motion.a 
-                href="#how-it-works" 
+                href="#how-it-works-business" 
                 whileHover={{ scale: 1.05 }}
                 className="text-sm text-white/80 hover:text-purple-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] px-3 py-2 rounded-full hover:bg-white/5"
               >
@@ -121,7 +121,7 @@ export default function Navbar() {
                   Performance
                 </motion.a>
                 <motion.a 
-                  href="#how-it-works" 
+                  href="#how-it-works-business" 
                   whileHover={{ x: 5 }}
                   className="text-sm text-white/80 hover:text-purple-300 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/5"
                 >

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function AIComparisonSection() {
   return (
-    <section className="py-20 bg-black">
+    <section id="performance-business" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
