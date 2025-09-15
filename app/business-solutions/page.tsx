@@ -60,7 +60,7 @@ const businessFeatures = [
     },
     {
       title: "Proactive Strategy",
-      description: "Anticipates objections and prepares counter-arguments before they&apos;re needed.",
+      description: "Anticipates objections and prepares counter-arguments before they're needed.",
       icon: "solar:lightning-bold",
       gradient: "from-purple-400 to-purple-800",
       details: [
