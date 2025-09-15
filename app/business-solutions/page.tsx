@@ -98,7 +98,7 @@ export default function BusinessSolutionsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-light bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-6"
+            className="text-4xl md:text-6xl font-light bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-6 py-2"
           >
             PlythosAI for Business: AI-Powered Negotiation and Communication
           </motion.h1>
