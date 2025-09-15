@@ -42,13 +42,12 @@ export default function Navbar() {
                   alt="PlythosAI"
                   width={32}
                   height={32}
-                  className="h-8 w-8 relative z-10"
+                  className="h-8 w-8 mr-3"
                 />
-                <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-sm" />
+                <span className="text-lg font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+                  PlythosAI
+                </span>
               </div>
-              <span className="text-lg font-medium bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
-                PlythosAI
-              </span>
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -75,18 +74,11 @@ export default function Navbar() {
                 How It Works
               </motion.a>
               <motion.button
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(168, 85, 247, 0.3)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="relative bg-gradient-to-r from-purple-600/80 to-purple-800/80 text-white px-5 py-2 rounded-full text-sm font-medium border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)] hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] backdrop-blur-sm"
-                style={{
-                  background: "linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%)",
-                }}
+                disabled
+                className="relative bg-gray-600 text-white px-5 py-2 rounded-full text-sm font-medium border border-gray-500/50 shadow-[0_0_15px_rgba(168,85,247,0.4)]"
               >
-                <span className="relative z-10">Get Extension</span>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/10 to-transparent opacity-50" />
+                <Icon icon="mdi:google-chrome" className="w-4 h-4 mr-2 inline" />
+                <span className="relative z-10">Extension Coming Soon</span>
               </motion.button>
             </div>
 
@@ -136,15 +128,11 @@ export default function Navbar() {
                   How It Works
                 </motion.a>
                 <motion.button 
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="relative bg-gradient-to-r from-purple-600/80 to-purple-800/80 text-white px-5 py-2 rounded-full text-sm font-medium w-fit border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)] mt-2"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%)",
-                  }}
+                  disabled
+                  className="relative bg-gray-600 text-white px-5 py-2 rounded-full text-sm font-medium w-fit border border-gray-500/50 shadow-[0_0_15px_rgba(168,85,247,0.4)] mt-2"
                 >
-                  <span className="relative z-10">Get Extension</span>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/10 to-transparent opacity-50" />
+                  <Icon icon="mdi:google-chrome" className="w-4 h-4 mr-2 inline" />
+                  <span className="relative z-10">Extension Coming Soon</span>
                 </motion.button>
               </div>
             </motion.div>
