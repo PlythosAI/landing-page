@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PlythosAI - Business Solutions",
+  title: "PlythosAI - Negotiate Like a Specialist on Facebook Marketplace",
   description: "Specialized AI that transforms Facebook Marketplace negotiations with psychology-driven strategies, real-time coaching, and 42% better success rates than generic AI.",
   icons: {
     icon: "https://storage.googleapis.com/cosmic-project-image-assets/images/64edf6ff-8552-43bd-a445-183f57f441b5/Group_152.png",
