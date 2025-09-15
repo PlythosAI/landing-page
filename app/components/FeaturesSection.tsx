@@ -66,7 +66,7 @@ const defaultFeatures: Feature[] = [
     },
     {
       title: "Proactive Strategy",
-      description: "Anticipates objections and prepares counter-arguments before they're needed.",
+      description: "Anticipates objections and prepares counter-arguments before they&apos;re needed.",
       icon: "solar:lightning-bold",
       gradient: "from-purple-400 to-purple-800",
       details: [
@@ -180,7 +180,7 @@ export default function FeaturesSection({
                 Ready to Communicate Like a Pro?
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join thousands of users who have transformed their communication with PlythosAI's specialized intelligence.
+                Join thousands of users who have transformed their communication with PlythosAI&apos;s specialized intelligence.
               </p>
               <motion.button
                 disabled
