@@ -28,13 +28,16 @@ export default function Research() {
 
           <FadeIn delay={150}>
             <p className="text-zinc-400 text-lg leading-relaxed">
-              We&apos;ve developed a hierarchical evaluation framework for AI agents operating in
-              complex, multi-step conversations like negotiations and persuasion — where success
-              is delayed and often hard to measure directly. Instead of relying only on final
-              outcomes or costly full simulations, our system evaluates strategic behavior across
-              three layers, using interpretable mid-level signals to diagnose performance as
-              interactions unfold. This layered approach makes high-stakes conversational AI more
-              transparent, scalable, and predictably aligned with real-world results.
+              We&apos;ve developed a hierarchical evaluation framework for AI
+              agents operating in complex, multi-step conversations like
+              negotiations and persuasion — where success is delayed and often
+              hard to measure directly. Instead of relying only on final
+              outcomes or costly full simulations, our system evaluates
+              strategic behavior across three layers, using interpretable
+              mid-level signals to diagnose performance as interactions unfold.
+              This layered approach makes high-stakes conversational AI more
+              transparent, scalable, and predictably aligned with real-world
+              results.
             </p>
           </FadeIn>
         </div>

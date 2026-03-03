@@ -80,31 +80,47 @@ export default function Process() {
                   </div>
 
                   {/* Mobile: line segments — absolute within grid container so py-6 padding is included */}
-                  {!isFirst && <div className="md:hidden absolute left-4 -translate-x-1/2 top-0 bottom-1/2 w-px bg-brand-600/25" />}
-                  {!isLast && <div className="md:hidden absolute left-4 -translate-x-1/2 top-1/2 bottom-0 w-px bg-brand-600/25" />}
+                  {!isFirst && (
+                    <div className="md:hidden absolute left-4 -translate-x-1/2 top-0 bottom-1/2 w-px bg-brand-600/25" />
+                  )}
+                  {!isLast && (
+                    <div className="md:hidden absolute left-4 -translate-x-1/2 top-1/2 bottom-0 w-px bg-brand-600/25" />
+                  )}
 
                   {/* Desktop: line segments above/below dot */}
-                  {!isFirst && <div className="hidden md:block absolute left-1/2 top-0 bottom-1/2 w-px bg-brand-600/25 -translate-x-1/2" />}
-                  {!isLast && <div className="hidden md:block absolute left-1/2 top-1/2 bottom-0 w-px bg-brand-600/25 -translate-x-1/2" />}
+                  {!isFirst && (
+                    <div className="hidden md:block absolute left-1/2 top-0 bottom-1/2 w-px bg-brand-600/25 -translate-x-1/2" />
+                  )}
+                  {!isLast && (
+                    <div className="hidden md:block absolute left-1/2 top-1/2 bottom-0 w-px bg-brand-600/25 -translate-x-1/2" />
+                  )}
 
                   {/* Desktop: dot on center */}
                   <div className="hidden md:block absolute left-1/2 top-1/2 w-3 h-3 rounded-full bg-brand-500 ring-4 ring-brand-500/10 -translate-x-1/2 -translate-y-1/2 z-10" />
 
                   {/* Icon — order alternates on desktop */}
-                  <div className={isEven
-                    ? "md:order-2 md:flex md:justify-start md:pl-8"
-                    : "md:order-1 md:flex md:justify-end md:pr-8"
-                  }>
+                  <div
+                    className={
+                      isEven
+                        ? "md:order-2 md:flex md:justify-start md:pl-8"
+                        : "md:order-1 md:flex md:justify-end md:pr-8"
+                    }
+                  >
                     <StepIcon number={number} icon={step.icon} />
                   </div>
 
                   {/* Text — order alternates on desktop */}
-                  <div className={isEven
-                    ? "md:order-1 md:pr-8"
-                    : "md:order-2 md:pl-8"
-                  }>
-                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">{step.description}</p>
+                  <div
+                    className={
+                      isEven ? "md:order-1 md:pr-8" : "md:order-2 md:pl-8"
+                    }
+                  >
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               </FadeIn>

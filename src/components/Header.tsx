@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LogoWordmark from "@/components/LogoWordmark";
 import EmailButton from "@/components/ui/EmailButton";
 
@@ -8,9 +9,17 @@ const Header = () => {
         <div className="ml-4 md:ml-6">
           <LogoWordmark />
         </div>
-        <EmailButton className="self-stretch m-3 md:m-4 px-4 py-2 md:px-6 md:py-4 text-md md:text-lg font-semibold">
-          Get a Quote
-        </EmailButton>
+        <div className="flex items-center">
+          <Link
+            href="/leaderboard"
+            className="hidden md:flex items-center px-4 py-2 text-sm font-medium text-brand-300 hover:text-white transition-colors"
+          >
+            Leaderboard
+          </Link>
+          <EmailButton className="self-stretch m-3 md:m-4 px-4 py-2 md:px-6 md:py-4 text-md md:text-lg font-semibold">
+            Get a Quote
+          </EmailButton>
+        </div>
       </div>
     </header>
   );
