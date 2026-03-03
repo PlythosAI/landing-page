@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link
             href="/leaderboard"
-            className="hidden md:flex items-center px-4 py-2 text-sm font-medium text-brand-300 hover:text-white transition-colors"
+            className="hidden md:flex items-center px-4 py-2 text-md font-medium text-brand-300 hover:text-white transition-colors"
           >
             Leaderboard
           </Link>

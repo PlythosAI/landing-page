@@ -33,7 +33,8 @@ export default async function LeaderboardPage() {
             Negotiation Leaderboard
           </p>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Highest total score at the end of the expo wins a gift card.
+            Highest total score at the end of the expo wins a{" "}
+            <span className="text-brand-300 font-semibold">£100 gift card</span>.
             Rankings update in real-time.
           </p>
         </div>
