@@ -10,7 +10,11 @@ interface FadeInProps {
   className?: string;
 }
 
-export default function FadeIn({ children, delay = 0, className }: FadeInProps) {
+export default function FadeIn({
+  children,
+  delay = 0,
+  className,
+}: FadeInProps) {
   const [ref, inView] = useInView();
 
   return (
