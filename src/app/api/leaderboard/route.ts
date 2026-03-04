@@ -3,8 +3,11 @@ import { db } from "@/db";
 import { leaderboard } from "@/db/schema";
 import { createInsertSchema } from "drizzle-zod";
 import { desc } from "drizzle-orm";
+import { z } from "zod";
 
-const insertLeaderboardSchema = createInsertSchema(leaderboard).omit({
+const insertLeaderboardSchema = createInsertSchema(leaderboard, {
+  email: z.email(),
+}).omit({
   id: true,
   totalScore: true,
   createdAt: true,

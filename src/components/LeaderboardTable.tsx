@@ -12,6 +12,7 @@ type LeaderboardRow = InferSelectModel<typeof leaderboard>;
 type RealtimeRow = {
   id: string;
   name: string;
+  email: string;
   final_cash: number;
   retained_assets: number;
   favorable_terms: number;
@@ -25,6 +26,7 @@ function mapRealtimeRow(row: RealtimeRow): LeaderboardRow {
   return {
     id: row.id,
     name: row.name,
+    email: row.email,
     finalCash: row.final_cash,
     retainedAssets: row.retained_assets,
     favorableTerms: row.favorable_terms,

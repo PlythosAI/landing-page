@@ -10,6 +10,7 @@ import {
 export const leaderboard = pgTable("leaderboard", {
   id: uuid("id").defaultRandom().primaryKey(),
   name: text("name").notNull(),
+  email: text("email").notNull(),
   finalCash: integer("final_cash").notNull(),
   retainedAssets: integer("retained_assets").notNull(),
   favorableTerms: integer("favorable_terms").notNull(),
