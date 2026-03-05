@@ -11,6 +11,9 @@ const insertLeaderboardSchema = createInsertSchema(leaderboard, {
   id: true,
   totalScore: true,
   createdAt: true,
+  gdprConsentAt: true,
+}).extend({
+  gdprConsent: z.literal(true, { error: "GDPR consent is required" }),
 });
 
 export async function GET() {
@@ -48,7 +51,7 @@ export async function POST(req: NextRequest) {
 
   const [row] = await db
     .insert(leaderboard)
-    .values({ ...rest, finalCash, retainedAssets, favorableTerms, totalScore })
+    .values({ ...rest, finalCash, retainedAssets, favorableTerms, totalScore, gdprConsentAt: new Date() })
     .returning();
 
   return NextResponse.json(row, { status: 201 });

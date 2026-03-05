@@ -17,5 +17,7 @@ export const leaderboard = pgTable("leaderboard", {
   totalScore: integer("total_score").notNull(),
   acceptedDeal: boolean("accepted_deal").notNull(),
   rounds: integer("rounds").notNull(),
+  gdprConsent: boolean("gdpr_consent").notNull().default(false),
+  gdprConsentAt: timestamp("gdpr_consent_at"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
