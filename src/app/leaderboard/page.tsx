@@ -20,21 +20,23 @@ export default async function LeaderboardPage() {
   }
 
   return (
-    <div className="min-h-screen text-white pt-50 pb-20 px-4">
+    <div className="min-h-screen text-white pt-16 pb-20 px-4">
       <div className="max-w-content mx-auto">
-        <div className="fixed inset-0 -z-999 h-screen-dynamic overflow-hidden pointer-events-none">
-          <div className="absolute bg-radial-[circle_farthest-corner_at_90%_10%] from-brand-600/30 via-brand-600/10 to-transparent blur-[180px] -top-70 -right-60 h-250 w-250 md:h-350 md:w-500 md:-top-90 md:-right-100 rounded-full" />
-        </div>
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="border-b border-zinc-800 py-8 mb-8">
+          <div className="mb-2">
+            <span className="text-amber-500 text-[10px] tracking-[0.3em] uppercase">
+              ● Live Rankings
+            </span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
             Edinburgh AI Expo
           </h1>
-          <p className="text-2xl md:text-3xl font-semibold text-brand-400 mb-4">
+          <p className="text-amber-400 text-lg font-bold uppercase tracking-wider mb-3">
             Negotiation Leaderboard
           </p>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          <p className="text-zinc-500 text-sm max-w-xl">
             Highest total score at the end of the expo wins a{" "}
-            <span className="text-brand-300 font-semibold">£100 gift card</span>.
+            <span className="text-amber-400 font-semibold">£100 gift card</span>.
             Rankings update in real-time.
           </p>
         </div>

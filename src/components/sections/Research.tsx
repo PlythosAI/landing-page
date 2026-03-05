@@ -9,21 +9,21 @@ export default function Research() {
           <FadeIn>
             <div className="flex flex-wrap justify-between items-center gap-2 mb-6">
               <div className="flex flex-row gap-2">
-                <BookOpen size={14} className="text-brand-400" />
-                <span className="text-xs font-semibold uppercase tracking-widest text-brand-400">
+                <BookOpen size={14} className="text-amber-400" />
+                <span className="text-xs font-semibold uppercase tracking-widest text-amber-400">
                   Peer-Reviewed Research
                 </span>
               </div>
-              <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500 border border-zinc-700 rounded-full px-2 py-0.5 w-fit md:w-auto">
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-500 border border-zinc-700 px-2 py-0.5 w-fit md:w-auto">
                 Coming Soon
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
               Targeting a Top-Tier ML Conference
             </h2>
 
-            <div className="h-px bg-brand-600/30 mb-8" />
+            <div className="h-px bg-amber-500/20 mb-8" />
           </FadeIn>
 
           <FadeIn delay={150}>

@@ -4,21 +4,22 @@ import EmailButton from "@/components/ui/EmailButton";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-999 w-full p-2 py-3 md:px-8 md:py-5">
-      <div className="w-full isolate rounded-full max-w-content mx-auto glass-panel flex items-center justify-between">
-        <div className="ml-4 md:ml-6">
+    <header className="fixed top-0 z-999 w-full bg-black border-b border-zinc-800 ">
+      <div className="py-3 px-4 md:px-8 flex items-center justify-between max-w-content mx-auto">
+        <div className="flex items-center gap-6">
           <LogoWordmark />
+          <span className="hidden md:block text-amber-500 text-[10px] tracking-[0.25em] uppercase">
+            Negotiation AI
+          </span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-6">
           <Link
             href="/leaderboard"
-            className="hidden md:flex items-center px-4 py-2 text-md font-medium text-brand-300 hover:text-white transition-colors"
+            className="hidden md:block text-[10px] text-zinc-500 hover:text-amber-400 uppercase tracking-wider transition-colors"
           >
             Leaderboard
           </Link>
-          <EmailButton className="self-stretch m-3 md:m-4 px-4 py-2 md:px-6 md:py-4 text-md md:text-lg font-semibold">
-            Get a Quote
-          </EmailButton>
+          <EmailButton>Get a Quote</EmailButton>
         </div>
       </div>
     </header>

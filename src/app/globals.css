@@ -1,9 +1,21 @@
 @import "tailwindcss";
 @plugin 'tailwind-scrollbar';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-50: theme(--color-amber-50);
+  --color-brand-100: theme(--color-amber-100);
+  --color-brand-200: theme(--color-amber-200);
+  --color-brand-300: theme(--color-amber-300);
+  --color-brand-400: theme(--color-amber-400);
+  --color-brand-500: theme(--color-amber-500);
+  --color-brand-600: theme(--color-amber-600);
+  --color-brand-700: theme(--color-amber-700);
+  --color-brand-800: theme(--color-amber-800);
+  --color-brand-900: theme(--color-amber-900);
+  --color-brand-950: theme(--color-amber-950);
+
+  --spacing-content: 85rem;
+  --spacing-screen-dynamic: 100dvh;
 }
 
 @theme inline {
@@ -11,38 +23,19 @@
   --color-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: black;
-    --foreground: #ededed;
-  }
-}
-
-@theme {
-  --color-brand-50: theme(--color-indigo-50);
-  --color-brand-100: theme(--color-indigo-100);
-  --color-brand-200: theme(--color-indigo-200);
-  --color-brand-300: theme(--color-indigo-300);
-  --color-brand-400: theme(--color-indigo-400);
-  --color-brand-500: theme(--color-indigo-500);
-  --color-brand-600: theme(--color-indigo-600);
-  --color-brand-700: theme(--color-indigo-700);
-  --color-brand-800: theme(--color-indigo-800);
-  --color-brand-900: theme(--color-indigo-900);
-  --color-brand-950: theme(--color-indigo-950);
-
-  --spacing-content: 85rem;
-  --spacing-screen-dynamic: 100dvh;
+:root {
+  --background: #000000;
+  --foreground: #d4d4d8;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono), 'Courier New', monospace;
 }
 
 @utility glass-panel {
-  @apply bg-brand-900/60 backdrop-blur-xl shadow-lg shadow-black/30 ring-2 ring-brand-500/40;
+  @apply bg-black border border-zinc-800;
 }
 
 @layer base {
@@ -52,6 +45,6 @@ body {
   }
 
   html {
-    @apply scrollbar scrollbar-thumb-brand-400/40 scrollbar-track-transparent;
+    @apply scrollbar scrollbar-thumb-amber-500/40 scrollbar-track-transparent;
   }
 }
