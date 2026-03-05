@@ -46,12 +46,12 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { finalCash, retainedAssets, favorableTerms, ...rest } = parsed.data;
-  const totalScore = finalCash + retainedAssets + favorableTerms;
+  const { finalCash, retainedAssets, favorableTerms, time, ...rest } = parsed.data;
+  const totalScore = Math.round(finalCash + retainedAssets + favorableTerms - time * 0.2);
 
   const [row] = await db
     .insert(leaderboard)
-    .values({ ...rest, finalCash, retainedAssets, favorableTerms, totalScore, gdprConsentAt: new Date() })
+    .values({ ...rest, finalCash, retainedAssets, favorableTerms, time, totalScore, gdprConsentAt: new Date() })
     .returning();
 
   return NextResponse.json(row, { status: 201 });

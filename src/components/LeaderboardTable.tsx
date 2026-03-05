@@ -19,6 +19,9 @@ type RealtimeRow = {
   total_score: number;
   accepted_deal: boolean;
   rounds: number;
+  time: number;
+  gdpr_consent: boolean;
+  gdpr_consent_at: string | null;
   created_at: string;
 };
 
@@ -33,6 +36,9 @@ function mapRealtimeRow(row: RealtimeRow): LeaderboardRow {
     totalScore: row.total_score,
     acceptedDeal: row.accepted_deal,
     rounds: row.rounds,
+    time: row.time,
+    gdprConsent: row.gdpr_consent,
+    gdprConsentAt: row.gdpr_consent_at ? new Date(row.gdpr_consent_at) : null,
     createdAt: new Date(row.created_at),
   };
 }
