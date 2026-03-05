@@ -115,12 +115,12 @@ export default function LeaderboardTable({
               <tr className="border-b border-brand-600/20 text-brand-300 text-xs uppercase tracking-wider">
                 <th className="py-4 px-4 text-left w-16">Rank</th>
                 <th className="py-4 px-4 text-left">Name</th>
-                <th className="py-4 px-4 text-right">Final Cash</th>
-                <th className="py-4 px-4 text-right">Retained Assets</th>
-                <th className="py-4 px-4 text-right">Favorable Terms</th>
+                {/* <th className="py-4 px-4 text-right">Final Cash</th> */}
+                {/* <th className="py-4 px-4 text-right">Retained Assets</th> */}
+                {/* <th className="py-4 px-4 text-right">Favorable Terms</th> */}
                 <th className="py-4 px-4 text-right">Total Score</th>
-                <th className="py-4 px-4 text-center">Deal</th>
                 <th className="py-4 px-4 text-center">Rounds</th>
+                <th className="py-4 px-4 text-center">Deal</th>
               </tr>
             </thead>
             <tbody>
@@ -139,19 +139,22 @@ export default function LeaderboardTable({
                   <td className="py-4 px-4 font-semibold text-white">
                     {row.name}
                   </td>
-                  <td className="py-4 px-4 text-right text-gray-300 font-mono">
+                  {/* <td className="py-4 px-4 text-right text-gray-300 font-mono">
                     {formatCurrency(row.finalCash)}
-                  </td>
-                  <td className="py-4 px-4 text-right text-gray-300 font-mono">
+                  </td> */}
+                  {/* <td className="py-4 px-4 text-right text-gray-300 font-mono">
                     {formatCurrency(row.retainedAssets)}
-                  </td>
-                  <td className="py-4 px-4 text-right text-gray-300 font-mono">
+                  </td> */}
+                  {/* <td className="py-4 px-4 text-right text-gray-300 font-mono">
                     {formatCurrency(row.favorableTerms)}
-                  </td>
+                  </td> */}
                   <td
                     className={`py-4 px-4 text-right font-bold font-mono ${index < 3 ? RANK_TEXT[index] : "text-white"}`}
                   >
                     {formatCurrency(row.totalScore)}
+                  </td>
+                  <td className="py-4 px-4 text-center text-gray-300">
+                    {row.rounds}
                   </td>
                   <td className="py-4 px-4 text-center">
                     {row.acceptedDeal ? (
@@ -163,9 +166,6 @@ export default function LeaderboardTable({
                         No
                       </span>
                     )}
-                  </td>
-                  <td className="py-4 px-4 text-center text-gray-300">
-                    {row.rounds}
                   </td>
                 </tr>
               ))}
