@@ -51,9 +51,9 @@ function formatCurrency(amount: number): string {
   }).format(amount);
 }
 
-const RANK_TEXT = ["text-yellow-400", "text-gray-300", "text-amber-600"];
-const RANK_BG = ["bg-yellow-400/10", "bg-gray-300/10", "bg-amber-600/10"];
-const RANK_MEDALS = ["🥇", "🥈", "🥉"];
+const RANK_TEXT = ["text-amber-400", "text-zinc-300", "text-amber-600"];
+const RANK_BG = ["bg-amber-500/5", "bg-zinc-500/5", "bg-amber-700/5"];
+const RANK_LABELS = ["01", "02", "03"];
 
 interface LeaderboardTableProps {
   initialRows: LeaderboardRow[];
@@ -101,11 +101,10 @@ export default function LeaderboardTable({
   if (rows.length === 0) {
     return (
       <FadeIn>
-        <div className="rounded-2xl bg-brand-600/10 border border-brand-600/20 py-24 text-center">
-          <p className="text-4xl mb-4">🏆</p>
-          <p className="text-gray-400 text-lg">No entries yet.</p>
-          <p className="text-gray-500 text-sm mt-2">
-            Be the first to negotiate!
+        <div className="border border-zinc-800 bg-black py-24 text-center">
+          <p className="text-amber-500 text-[10px] tracking-[0.3em] uppercase mb-4">── No Entries ──</p>
+          <p className="text-zinc-500 text-sm">
+            Be the first to negotiate.
           </p>
         </div>
       </FadeIn>
@@ -114,62 +113,50 @@ export default function LeaderboardTable({
 
   return (
     <FadeIn>
-      <div className="rounded-2xl bg-brand-600/10 border border-brand-600/20 overflow-hidden">
+      <div className="border border-zinc-800 bg-black overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full text-xs font-mono">
             <thead>
-              <tr className="border-b border-brand-600/20 text-brand-300 text-xs uppercase tracking-wider">
-                <th className="py-4 px-4 text-left w-16">Rank</th>
-                <th className="py-4 px-4 text-left">Name</th>
-                {/* <th className="py-4 px-4 text-right">Final Cash</th> */}
-                {/* <th className="py-4 px-4 text-right">Retained Assets</th> */}
-                {/* <th className="py-4 px-4 text-right">Favorable Terms</th> */}
-                <th className="py-4 px-4 text-right">Total Score</th>
-                <th className="py-4 px-4 text-center">Rounds</th>
-                <th className="py-4 px-4 text-center">Deal</th>
+              <tr className="border-b border-zinc-800 bg-zinc-900/50">
+                <th className="py-3 px-4 text-left text-[10px] text-zinc-500 uppercase tracking-wider w-16">Rank</th>
+                <th className="py-3 px-4 text-left text-[10px] text-zinc-500 uppercase tracking-wider">Name</th>
+                <th className="py-3 px-4 text-right text-[10px] text-zinc-500 uppercase tracking-wider">Total Score</th>
+                <th className="py-3 px-4 text-center text-[10px] text-zinc-500 uppercase tracking-wider">Rounds</th>
+                <th className="py-3 px-4 text-center text-[10px] text-zinc-500 uppercase tracking-wider">Deal</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, index) => (
                 <tr
                   key={row.id}
-                  className={`border-b border-brand-600/10 last:border-0 transition-colors hover:bg-brand-600/5 ${
+                  className={`border-b border-zinc-900 last:border-0 transition-colors hover:bg-amber-500/3 ${
                     index < 3 ? RANK_BG[index] : ""
                   }`}
                 >
                   <td
-                    className={`py-4 px-4 font-bold text-base ${index < 3 ? RANK_TEXT[index] : "text-gray-500"}`}
+                    className={`py-3 px-4 font-bold tabular-nums ${index < 3 ? RANK_TEXT[index] : "text-zinc-600"}`}
                   >
-                    {index < 3 ? RANK_MEDALS[index] : index + 1}
+                    {index < 3 ? RANK_LABELS[index] : String(index + 1).padStart(2, "0")}
                   </td>
-                  <td className="py-4 px-4 font-semibold text-white">
+                  <td className="py-3 px-4 text-zinc-200">
                     {row.name}
                   </td>
-                  {/* <td className="py-4 px-4 text-right text-gray-300 font-mono">
-                    {formatCurrency(row.finalCash)}
-                  </td> */}
-                  {/* <td className="py-4 px-4 text-right text-gray-300 font-mono">
-                    {formatCurrency(row.retainedAssets)}
-                  </td> */}
-                  {/* <td className="py-4 px-4 text-right text-gray-300 font-mono">
-                    {formatCurrency(row.favorableTerms)}
-                  </td> */}
                   <td
-                    className={`py-4 px-4 text-right font-bold font-mono ${index < 3 ? RANK_TEXT[index] : "text-white"}`}
+                    className={`py-3 px-4 text-right tabular-nums font-bold ${index < 3 ? RANK_TEXT[index] : "text-zinc-300"}`}
                   >
                     {formatCurrency(row.totalScore)}
                   </td>
-                  <td className="py-4 px-4 text-center text-gray-300">
+                  <td className="py-3 px-4 text-center text-zinc-500 tabular-nums">
                     {row.rounds}
                   </td>
-                  <td className="py-4 px-4 text-center">
+                  <td className="py-3 px-4 text-center">
                     {row.acceptedDeal ? (
-                      <span className="inline-block px-2 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">
-                        Yes
+                      <span className="text-[10px] text-emerald-400 uppercase tracking-wider">
+                        ● YES
                       </span>
                     ) : (
-                      <span className="inline-block px-2 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-medium">
-                        No
+                      <span className="text-[10px] text-red-400 uppercase tracking-wider">
+                        ● NO
                       </span>
                     )}
                   </td>

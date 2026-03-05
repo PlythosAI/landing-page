@@ -14,10 +14,10 @@ export default function UseCaseCard({
 }: UseCaseCardProps) {
   return (
     <Card className="flex flex-col gap-3 h-full">
-      <div className="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-brand-400">
+      <div className="text-amber-500/60 mb-1">
         {icon}
       </div>
-      <h3 className="text-base font-semibold text-white">{title}</h3>
+      <h3 className="text-sm font-bold text-amber-400 uppercase tracking-wider">{title}</h3>
       <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
     </Card>
   );

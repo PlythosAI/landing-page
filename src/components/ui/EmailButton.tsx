@@ -11,7 +11,7 @@ export default function EmailButton({ children, className }: ButtonProps) {
     <a
       href="mailto:laurentiu@plythosai.com"
       className={twMerge(
-        "rounded-full flex items-center bg-brand-600 hover:bg-brand-500 text-white font-semibold w-fit transition-colors duration-200 text-xl py-3 px-5 md:py-4 md:px-6",
+        "flex items-center border border-amber-500 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 font-mono text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 transition-colors duration-200 w-fit",
         className,
       )}
     >

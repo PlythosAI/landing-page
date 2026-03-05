@@ -6,9 +6,9 @@ import BenchmarkBar from "@/components/ui/BenchmarkBar";
 import FadeIn from "@/components/ui/FadeIn";
 
 const bars = [
-  { label: "Human", value: 6, colorClass: "bg-zinc-600" },
-  { label: "GPT-5", value: 13, colorClass: "bg-zinc-500" },
-  { label: "PlythosAI", value: 81, colorClass: "bg-brand-500" },
+  { label: "Human", value: 6, colorClass: "bg-zinc-700" },
+  { label: "GPT-5", value: 13, colorClass: "bg-zinc-600" },
+  { label: "PlythosAI", value: 81, colorClass: "bg-amber-500" },
 ];
 
 const MAX_VALUE = 81;
