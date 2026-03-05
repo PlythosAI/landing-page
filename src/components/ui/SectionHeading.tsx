@@ -12,7 +12,7 @@ export default function SectionHeading({
   return (
     <div className={`mb-12 ${centered ? "text-center" : ""}`}>
       <div className={`mb-2 ${centered ? "flex justify-center" : ""}`}>
-        <span className="text-amber-500 text-[10px] tracking-[0.25em] uppercase">
+        <span className="text-brand-500 text-[10px] tracking-[0.25em] uppercase">
           ── {title} ──
         </span>
       </div>

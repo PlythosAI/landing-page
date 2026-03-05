@@ -9,7 +9,7 @@ import CallToAction from "@/components/sections/CallToAction";
 
 export default function Home() {
   return (
-    <>
+    <main className="h-full">
       <Hero />
       <Benchmarks />
       <Partners />
@@ -18,6 +18,6 @@ export default function Home() {
       <UseCases />
       <Process />
       <CallToAction />
-    </>
+    </main>
   );
 }

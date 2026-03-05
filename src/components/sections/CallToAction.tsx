@@ -6,9 +6,9 @@ export default function CallToAction() {
     <section className="py-6 px-3">
       <div className="w-fit mx-auto">
         <FadeIn>
-          <div className="border border-amber-500/40 bg-black px-6 py-12 md:px-12 md:py-16 text-center">
+          <div className="border border-brand-500/40 bg-black px-6 py-12 md:px-12 md:py-16 text-center">
             <div className="mb-3">
-              <span className="text-amber-500 text-[10px] tracking-[0.25em] uppercase">
+              <span className="text-brand-500 text-[10px] tracking-[0.25em] uppercase">
                 ── Deploy Now ──
               </span>
             </div>

@@ -8,7 +8,7 @@ const LogoWordmark = () => {
         <Logo className="h-8 md:h-10" />
         <div className="flex gap-px">
           <span className="text-transparent">Plythos</span>
-          <span className="text-transparent font-semibold">AI</span>
+          {/*<span className="text-transparent font-semibold">AI</span>*/}
         </div>
       </div>
     </Link>
