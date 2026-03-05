@@ -66,20 +66,14 @@ export default function Process() {
                     <div className="relative z-10 w-2.5 h-2.5 rounded-full bg-amber-500 ring-4 ring-amber-500/10" />
                   </div>
 
-                  {/* Mobile: line segments */}
-                  {!isFirst && (
-                    <div className="md:hidden absolute left-4 -translate-x-1/2 top-0 bottom-1/2 w-px bg-amber-500/20" />
-                  )}
+                  {/* Mobile: full segment from dot to next dot */}
                   {!isLast && (
-                    <div className="md:hidden absolute left-4 -translate-x-1/2 top-1/2 bottom-0 w-px bg-amber-500/20" />
+                    <div className="md:hidden absolute left-4 -translate-x-1/2 top-1/2 h-full w-px bg-amber-500/20" />
                   )}
 
-                  {/* Desktop: line segments above/below dot */}
-                  {!isFirst && (
-                    <div className="hidden md:block absolute left-1/2 top-0 bottom-1/2 w-px bg-amber-500/20 -translate-x-1/2" />
-                  )}
+                  {/* Desktop: full segment from dot to next dot */}
                   {!isLast && (
-                    <div className="hidden md:block absolute left-1/2 top-1/2 bottom-0 w-px bg-amber-500/20 -translate-x-1/2" />
+                    <div className="hidden md:block absolute left-1/2 top-1/2 h-full w-px bg-amber-500/20 -translate-x-1/2" />
                   )}
 
                   {/* Desktop: dot on center */}
