@@ -4,8 +4,8 @@ import EmailButton from "@/components/ui/EmailButton";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-999 w-full bg-black border-b border-zinc-800 ">
-      <div className="py-3 px-4 md:px-8 flex items-center justify-between max-w-content mx-auto">
+    <header className="sticky top-0 z-50 shrink-0 w-full bg-black border-b border-zinc-800 h-[var(--header-height)]">
+      <div className="h-full px-4 md:px-8 flex items-center justify-between max-w-content mx-auto">
         <div className="flex items-center gap-6">
           <LogoWordmark />
           <span className="hidden md:block text-amber-500 text-[10px] tracking-[0.25em] uppercase">

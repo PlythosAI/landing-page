@@ -27,17 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen-dynamic`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full flex flex-col`}
       >
         <Header />
-        <main>
-          <div className="relative w-full">
+        <div className="flex-1 min-h-0 overflow-y-auto scrollbar scrollbar-thumb-amber-500/40 scrollbar-track-transparent">
+          <main className="h-full">
             {children}
-          </div>
-        </main>
-        <Footer />
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

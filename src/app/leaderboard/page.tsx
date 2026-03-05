@@ -20,7 +20,7 @@ export default async function LeaderboardPage() {
   }
 
   return (
-    <div className="min-h-screen text-white pt-16 pb-20 px-4">
+    <div className="min-h-screen text-white py-16 px-4">
       <div className="max-w-content mx-auto">
         <div className="border-b border-zinc-800 py-8 mb-8">
           <div className="mb-2">

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen-dynamic flex items-center px-4 sm:px-6 border-b border-zinc-800">
-      <div className="max-w-content mx-auto pt-10">
+    <section className="min-h-full flex items-center px-4 sm:px-6 border-b border-zinc-800">
+      <div className="max-w-content mx-auto">
         {/*<div className="mb-3">*/}
         {/*  <span className="text-amber-500 text-[10px] tracking-[0.3em] uppercase">*/}
         {/*    ● System Online*/}
