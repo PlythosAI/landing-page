@@ -11,9 +11,9 @@ export default function Hero() {
         {/*    ● System Online*/}
         {/*  </span>*/}
         {/*</div>*/}
-        <div className="flex mb-8">
-          <Logo className="h-12 md:h-20" />
-        </div>
+        {/*<div className="flex mb-8">*/}
+        {/*  <Logo className="h-12 md:h-20" />*/}
+        {/*</div>*/}
         <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4 max-w-175">
           AI That{" "}
           <span className="text-amber-400">
