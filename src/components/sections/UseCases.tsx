@@ -34,7 +34,7 @@ export default function UseCases() {
             subtitle="PlythosAI operates across the most complex negotiation domains in enterprise."
           />
         </FadeIn>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div className="grid md:grid-cols-3 gap-3 md:gap-6">
           {useCases.map((useCase, i) => (
             <FadeIn key={useCase.title} delay={i * 100} className="h-full">
               <UseCaseCard {...useCase} />
