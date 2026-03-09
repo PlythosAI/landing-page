@@ -16,9 +16,63 @@ const geistMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PlythosAI",
-  description: "Negotiation AI",
-  icons: "/favicon.svg",
+  title: {
+    default: "PlythosAI — Negotiation AI",
+    template: "%s | PlythosAI",
+  },
+  description:
+    "PlythosAI is an AI-powered negotiation platform that helps businesses close better deals, faster. Backed by research and built for enterprise.",
+  keywords: [
+    "negotiation AI",
+    "AI negotiation platform",
+    "deal intelligence",
+    "enterprise AI",
+    "contract negotiation",
+    "PlythosAI",
+  ],
+  authors: [{ name: "PlythosAI" }],
+  creator: "PlythosAI",
+  metadataBase: new URL("https://plythos.ai"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://plythos.ai",
+    siteName: "PlythosAI",
+    title: "PlythosAI — Negotiation AI",
+    description:
+      "AI-powered negotiation platform that helps businesses close better deals, faster.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1366,
+        height: 768,
+        alt: "PlythosAI — Negotiation AI",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PlythosAI — Negotiation AI",
+    description:
+      "AI-powered negotiation platform that helps businesses close better deals, faster.",
+    images: ["/og-image.png"],
+    creator: "@plythosai",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
