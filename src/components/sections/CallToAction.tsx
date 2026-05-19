@@ -1,4 +1,4 @@
-import EmailButton from "@/components/ui/EmailButton";
+import CtaButton from "@/components/ui/CtaButton";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function CallToAction() {
@@ -19,7 +19,7 @@ export default function CallToAction() {
               Deploy PlythosAI on your most critical deal. Our team will scope a
               pilot in under a week.
             </p>
-            <EmailButton className="mx-auto">Get a Quote</EmailButton>
+            <CtaButton type="quote" className="mx-auto">Get a Quote</CtaButton>
           </div>
         </FadeIn>
       </div>

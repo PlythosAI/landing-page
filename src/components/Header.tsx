@@ -1,6 +1,5 @@
-import Link from "next/link";
 import LogoWordmark from "@/components/LogoWordmark";
-import EmailButton from "@/components/ui/EmailButton";
+import CtaButton from "@/components/ui/CtaButton";
 
 const Header = () => {
   return (
@@ -13,13 +12,7 @@ const Header = () => {
           </span>
         </div>
         <div className="flex items-center gap-6">
-          <Link
-            href="/leaderboard"
-            className="hidden md:block text-[10px] text-zinc-500 hover:text-amber-400 uppercase tracking-wider transition-colors"
-          >
-            Leaderboard
-          </Link>
-          <EmailButton>Get a Quote</EmailButton>
+          <CtaButton type="quote">Get a Quote</CtaButton>
         </div>
       </div>
     </header>
