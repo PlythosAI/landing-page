@@ -58,7 +58,7 @@ export default function Benchmarks() {
             ))}
           </div>
           <p className="text-xs text-zinc-600 mt-4 text-center">
-            NeurIPS benchmark results
+            To be published benchmark results
           </p>
         </div>
       </div>
